@@ -1,0 +1,156 @@
+.card-header {
+  justify-content: center;
+}
+
+.container {
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+.btn-outline-primary.custom-btn {
+  background-color: #fff;
+  border-color: #52b8d9;
+}
+.btn-outline-primary.custom-btn:hover {
+  background: #52b8d9;
+  color: #fff !important;
+}
+
+p {
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+#place {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 48px;
+  font-family: "Averia Libre", cursive;
+  color: #52b8d9;
+  display: inline-block;
+  text-align: center;
+}
+
+#tempo {
+  font-weight: 900;
+  font-size: 134px;
+  line-height: 48px;
+  font-family: "Averia Libre", cursive;
+  display: inline-block;
+  color: #ef476f;
+}
+
+#date {
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  color: #db785a;
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+#starry {
+  margin-top: 5%;
+  width: 100px;
+  height: 100px;
+}
+
+#inputCity {
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+}
+
+#city {
+  text-align: center;
+}
+
+#searchCity {
+  font-family: "Roboto Slab", serif;
+  color: #52b8d9;
+}
+
+#place {
+  font-weight: 900;
+  font-size: 50px;
+  text-align: center;
+}
+
+#icon {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  position: relative;
+  margin-left: 20%;
+}
+
+#day {
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Averia Libre", cursive;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.units {
+  position: relative;
+  top: -24px;
+  font-size: 24px;
+  color: #52b8d9;
+}
+
+#clear {
+  font-size: 44px;
+  color: #black;
+  text-align: center !important;
+}
+
+#weatherTopBox .row div:last-child p {
+  line-height: 3rem;
+  margin-top: 20px;
+}
+
+#dateBox #icon {
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  #weatherTopBox,
+  #timeTempBox {
+    margin-bottom: 20px;
+  }
+
+  #weatherTopBox .row div,
+  #timeTempBox .row div {
+    text-align: center !important;
+  }
+
+  #timeTempBox .row div {
+    margin-bottom: 20px;
+  }
+
+  #timeTempBox .row div:nth-child(2) {
+    margin-top: -20px;
+  }
+
+  #dateBox .card-header {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #dateBox .card-deck {
+    display: block;
+  }
+
+  #dateBox .card-deck .card {
+    margin-bottom: 20px;
+  }
+
+  #dateBox #icon {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}

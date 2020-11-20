@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Solway:wght@300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App Wireframe</title>
 </head>
+
 <body>
-    <h1>Hello GIT!</h1>
- <script src="script.js"></script>
+    <div id="weatherTopBox" class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <img id="starry" src="src/iconfinder_STARY_NIGHT_5943279.png" alt="" />
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <p id="clear">Weather Report</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="timeTempBox" class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <p id="place">Quito</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <p id="date">Monday, 12 October 2020</p>
+            </div>
+            <div class="col-lg-4 text-right">
+                <p id="tempo">15º</p>
+                <span class="units">
+                    <a href="#" id="celsius-link">C</a> |
+                    <a href="#" id="fahrenheit-link">F</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchCityBox" class="container mb-4">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <form id="citySelect">
+                    <div class="form-row justify-content-center">
+                        <div class="form-group form-control-sm">
+                            <input type="search" class="form-control" id="inputCity" placeholder="Quito, Ecuador" />
+                        </div>
+                        <button type="submit" value="submit" class="btn btn-outline-primary custom-btn" id="searchCity">
+                            Search 📍
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dateBox" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck">
+                    <div class="card text-center">
+                        <h5 class="card-header">Tuesday</h5>
+                        <img class="card-img-top" id="icon" src="src/iconfinder_SNOWFALL_5943267.png" alt="snow" />
+                        <div class="card-body">
+                            <p class="card-text" id="day">4ºC</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center">
+                        <h5 class="card-header">Wednesday</h5>
+                        <img class="card-img-top" id="icon" src="src/iconfinder_THUNDERSTORM_5943280.png" alt="rain" />
+                        <div class="card-body">
+                            <p class="card-text" id="day">19ºC</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center">
+                        <h5 class="card-header">Thursday</h5>
+                        <img class="card-img-top" id="icon" src="src/iconfinder_WINDY_5943261.png" alt="snow" />
+                        <div class="card-body">
+                            <p class="card-text" id="day">21ºC</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center">
+                        <h5 class="card-header">Friday</h5>
+                        <img class="card-img-top" id="icon" src="src/iconfinder_UMBRELA_5943283.png" alt="snow" />
+                        <div class="card-body">
+                            <p class="card-text" id="day">10ºC</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center">
+                        <h5 class="card-header">Saturday</h5>
+                        <img class="card-img-top" id="icon" src="src/iconfinder_SUMMER_5943272.png" alt="snow" />
+                        <div class="card-body">
+                            <p class="card-text" id="day">30ºC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
 </body>
+
 </html>
