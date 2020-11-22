@@ -19,6 +19,16 @@ p {
   font-family: "IM Fell DW Pica SC", serif;
 }
 
+#footer {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 48px;
+  font-family: "Averia Libre", cursive;
+  color: #ef476f;
+  display: inline-block;
+  text-align: center;
+}
+
 #place {
   font-weight: 900;
   font-size: 50px;
