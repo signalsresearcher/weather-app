@@ -1,14 +1,6 @@
-function formatDate(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
 
-  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -18,9 +10,22 @@ function formatDate(date) {
     "Friday",
     "Saturday"
   ];
-  let day = days[dayIndex];
+  let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
 
-  return `${day} ${hours}:${minutes}`;
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
@@ -41,7 +46,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(dispalyForecast);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function submitSearch(event) {
@@ -77,23 +82,23 @@ function displayCelsiusTemperature(event) {
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#dateBox");
+  let forecastElement = document.querySelector(".card.text-center");
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-2">
-      <h3>
+    <div class="card-header">
+      <h5>
         ${formatHours(forecast.dt * 1000)}
-      </h3>
+      </h5>
       <img
         src="http://openweathermap.org/img/wn/${
           forecast.weather[0].icon
         }@2x.png"
       />
-      <div class="weather-forecast-temperature">
+      <div class="p.card-text">
         <strong>
           ${Math.round(forecast.main.temp_max)}°
         </strong>
@@ -114,4 +119,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
