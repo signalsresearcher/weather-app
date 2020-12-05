@@ -24,10 +24,12 @@ function formatDate(date) {
 }
 
 function showTemperature(response) {
+  let iconElement = document.querySelector("#starry");
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#place").innerHTML = response.data.name;
   document.querySelector("#tempo").innerHTML = Math.round(
     response.data.main.temp
-  );
+  ); 
 }
 
 function searchCity(city) {
