@@ -1,5 +1,12 @@
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(
+    -55deg,
+    #ee7752,
+    #fc466b,
+    #c471ed,
+    #3f5efb,
+    #23d5ab
+  );
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -33,6 +40,39 @@ body {
   color: #fff !important;
 }
 
+.btn-outline-primary.custom2-btn {
+  background-color: #fff;
+  border-color: #52b8d9;
+}
+.btn-outline-primary.custom2-btn:hover {
+  background: #52b8d9;
+  color: #fff !important;
+  box-shadow: 1px 1px #3f5efb, 2px 2px #3f5efb, 3px 3px #3f5efb !important;
+  transform: translateX(-3px);
+}
+
+.textblue {
+  color: #3f5efb;
+}
+a.textblue:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+a.textwhite {
+  color: whitesmoke;
+  transition: transform 0.25s;
+}
+
+a.textwhite:hover {
+  color: white !important;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+}
+
 p {
   font-family: "IM Fell DW Pica SC", serif;
 }
@@ -42,8 +82,10 @@ p {
   font-size: 20px;
   line-height: 48px;
   font-family: "Averia Libre", cursive;
-  color: #ef476f;
+  color: #2c3e50;
   text-align: center;
+  line-height: 3rem;
+  margin-top: 20px;
 }
 
 #place {
@@ -69,7 +111,7 @@ p {
   font-weight: 900;
   font-size: 30px;
   text-align: center;
-  color: #db785a;
+  color: #2c3e50;
   font-family: "IM Fell DW Pica SC", serif;
 }
 
@@ -179,5 +221,16 @@ p {
     width: 100%;
     max-width: 200px;
     height: auto;
+  }
+
+  #shadowbtn {
+    color: #1d9af2 !important;
+    border: 1px solid #1d9af2 !important;
+    border-radius: 4px !important;
+    padding: 0 15px !important;
+    cursor: pointer !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease-in-out !important;
   }
 }
