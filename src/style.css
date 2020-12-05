@@ -77,6 +77,22 @@ p {
   font-family: "IM Fell DW Pica SC", serif;
 }
 
+#forecastHi {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 48px;
+  font-family: "Averia Libre", cursive;
+  color: #2c3e50;
+}
+
+#forecastLo {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 48px;
+  font-family: "Averia Libre", cursive;
+  color: gray;
+}
+
 #footer {
   font-weight: 900;
   font-size: 20px;
