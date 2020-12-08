@@ -77,7 +77,8 @@ p {
   font-family: "IM Fell DW Pica SC", serif;
 }
 
-#humidity {
+#humidity,
+#desc {
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
