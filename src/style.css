@@ -78,7 +78,7 @@ p {
 }
 
 #humidity {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 28px;
   font-family: "Averia Libre";
@@ -86,7 +86,7 @@ p {
 }
 
 #wind {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   font-family: "Averia Libre";
