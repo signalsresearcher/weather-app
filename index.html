@@ -13,9 +13,6 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
 
-    <!-- ## JS libraries should be placed before closing body tag ## -->
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-
     <title>Weather App Wireframe</title>
 </head>
 
@@ -23,7 +20,7 @@
     <div id="weatherTopBox" class="container">
         <div class="row">
             <div class="col-lg-3">
-                <img id="starry" src="src/preloader-wifi-64.png" alt="icon" />
+                <img id="starry" src="src/Ball-1s-200px.png" alt="icon" />
             </div>
             <div class="col-lg-6 align-self-center">
                 <p id="clear">Weather Report</p>
@@ -35,18 +32,16 @@
         <div class="row">
             <div class="col-lg-4">
                 <p id="place">Quito</p>
+                <p><a class="textwhite active" id="wind"" href="#">Wind: meter/sec</a></p>
+                </p><a class="textwhite active" id="humidity" href="#">Humidity: %</a></p>
             </div>
             <div class="col-lg-4 text-center">
-                <!-- <p id="date">Monday, 12 October 2020</p> -->
+                
                 <p id="date">Loading..</p>
             </div>
             <div class="col-lg-4 text-right">
                 <p id="tempo">0</p>
 
-                <!--
-                Notes:
-                Don't use ° for degree symbol, use &deg; html symbol instead. This will ensure that the symbol will display correctly on any device.
-                -->
                 <span class="units">
                     <a class="textwhite active" href="#" id="celsius-link">&deg;C</a> |
                     <a class="textwhite" href="#" id="fahrenheit-link">&deg;F</a>
@@ -72,56 +67,28 @@
         </div>
     </div>
 
-    <!-- ## Added preloader element while API call is in progress ## -->
     <div id="preloadBox" class="text-center">
         <div class="text-white mb-2">Loading, please wait..</div>
-        <img src="src/preloader-chasing-arrows-white-128.png" alt="preloader">
+        <img src="src/Ripple-1s-200px.png" alt="preloader">
     </div>
 
     <div id="dateBox" class="container-fluid" style="display:none;">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
-                    <!-- ## Added number markers to each card (e.g. n1, n2, n3..) ## -->
                     <div class="card text-center n1">
-                        <!-- ## Commented the hardcoded elements, JS will inject those items after API call on page load ## -->
-                        <!-- <h5 class="card-header">Tuesday</h5>
-                        <img class="card-img-top" src="src/iconfinder_SNOWFALL_5943267.png" alt="snow" />
-                        <div class="card-body">
-                            <p class="card-text"><span id="forecastHi">5</span>º |<span id="forecastLo"> 40</span>º</p>
-                        </div> -->
                     </div>
 
                     <div class="card text-center n2">
-                        <!-- <h5 class="card-header">Wednesday</h5>
-                        <img class="card-img-top" src="src/iconfinder_THUNDERSTORM_5943280.png" alt="rain" />
-                        <div class="card-body">
-                            <p class="card-text"><span id="forecastHi">19</span>º |<span id="forecastLo"> 30</span>º</p>
-                        </div> -->
                     </div>
 
                     <div class="card text-center n3">
-                        <!-- <h5 class="card-header">Thursday</h5>
-                        <img class="card-img-top" src="src/iconfinder_WINDY_5943261.png" alt="snow" />
-                        <div class="card-body">
-                            <p class="card-text"><span id="forecastHi">15</span>º |<span id="forecastLo"> 10</span>º</p>
-                        </div> -->
                     </div>
 
                     <div class="card text-center n4">
-                        <!-- <h5 class="card-header">Friday</h5>
-                        <img class="card-img-top" src="src/iconfinder_UMBRELA_5943283.png" alt="snow" />
-                        <div class="card-body">
-                            <p class="card-text"><span id="forecastHi">13</span>º |<span id="forecastLo"> 70</span>º</p>
-                        </div> -->
                     </div>
 
                     <div class="card text-center n5">
-                        <!-- <h5 class="card-header">Saturday</h5>
-                        <img class="card-img-top" src="src/iconfinder_SUMMER_5943272.png" alt="snow" />
-                        <div class="card-body">
-                            <p class="card-text"><span id="forecastHi">40</span>º |<span id="forecastLo">17</span>º</p>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -130,7 +97,6 @@
 
     <p id="footer"><button class="btn btn-outline-primary custom2-btn"><a class="textblue" href="https://github.com/signalsresearcher/weather-app" target="_blank">Open Source Code</button></a> by Larissa Murillo</p>
   
-    <!-- ## Make sure that all libraries are added before custom JS code ## -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

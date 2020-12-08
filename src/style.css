@@ -27,7 +27,6 @@ body {
   justify-content: center;
 }
 
-
 .container {
   font-family: "IM Fell DW Pica SC", serif;
 }
@@ -78,27 +77,27 @@ p {
   font-family: "IM Fell DW Pica SC", serif;
 }
 
-#forecastHi {
+#humidity {
   font-weight: 900;
-  font-size: 30px;
-  line-height: 48px;
-  font-family: "Averia Libre", cursive;
-  color: #2c3e50;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Averia Libre";
+  color: #c0c0c0;
 }
 
-#forecastLo {
+#wind {
   font-weight: 900;
-  font-size: 20px;
-  line-height: 48px;
-  font-family: "Averia Libre", cursive;
-  color: gray;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Averia Libre";
+  color: #ffcba4;
 }
 
 #footer {
   font-weight: 900;
   font-size: 20px;
   line-height: 48px;
-  font-family: "Averia Libre", cursive;
+  font-family: "Averia Libre";
   color: #2c3e50;
   text-align: center;
   line-height: 3rem;
@@ -109,7 +108,7 @@ p {
   font-weight: 900;
   font-size: 50px;
   line-height: 48px;
-  font-family: "Averia Libre", cursive;
+  font-family: "Averia Libre";
   color: #52b8d9;
   display: inline-block;
   text-align: center;
@@ -119,7 +118,7 @@ p {
   font-weight: 900;
   font-size: 134px;
   line-height: 48px;
-  font-family: "Averia Libre", cursive;
+  font-family: "Averia Libre";
   display: inline-block;
   color: whitesmoke;
 }
@@ -136,7 +135,6 @@ p {
   margin-top: 5%;
   width: 100px;
   height: auto;
-  
 }
 
 #inputCity {
@@ -171,7 +169,7 @@ p {
   font-weight: 900;
   font-size: 20px;
   text-align: center;
-  font-family: "Averia Libre", cursive;
+  font-family: "Averia Libre";
 }
 
 .row {
@@ -201,41 +199,37 @@ p {
   margin: 0 auto;
 }
 
-
-/* ## Additional CSS ## */
 #dateBox .card {
-  align-items:center;
+  align-items: center;
 }
 
 #dateBox .card .card-header {
-  width:100%;
-  font:normal 2rem "IM Fell DW Pica SC", serif;
+  width: 100%;
+  font: normal 2rem "IM Fell DW Pica SC", serif;
 }
 
 #dateBox .card .card-header span {
-  display:block;
+  display: block;
 }
 
 #dateBox .card .card-header small {
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
 #dateBox .card img.card-img-top {
-  max-width:100px;
+  max-width: 100px;
 }
 
-.forecastHi, .forecastLo {
-  font:normal 1.8rem "IM Fell DW Pica SC", serif;
+.forecastHi,
+.forecastLo {
+  font: normal 1.8rem "IM Fell DW Pica SC", serif;
 }
 
-#timeTempBox .units .active{
-  background:#333;
-  padding:5px 8px;
-  border-radius:50px;
+#timeTempBox .units .active {
+  background: #333;
+  padding: 5px 8px;
+  border-radius: 50px;
 }
-
-/* ## End of Additional CSS ## */
-
 
 @media (max-width: 991.98px) {
   #weatherTopBox,
